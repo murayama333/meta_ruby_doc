@@ -1,3 +1,6 @@
+# 参照元
+
+[Metaprogramming in Ruby](http://ruby-metaprogramming.rubylearning.com/html/self.html)
 
 # Quote from Programming Ruby 1.9
 
@@ -10,8 +13,5 @@ Rubyにはカレントオブジェクトというコンセプトがある。こ�
 
 1つ目の役割は、selfはRubyのインスタンス変数を管理するということ。あなたがインスタンスへんすうにアクセスを試みたとき、Rubyはselfによって参照するオブジェクトを解決している。
 
-2つ目の役割はメソッド呼び出しである。
-
-Second, self plays a vital role in method calling. In Ruby, each method call is made on some object. There's no explicit receiver. In this case, Ruby uses the current object, self, as the receiver. It goes to self's class and looks up the method. Calling a method with an explicit receiver changes self. self is also changed by a class definition.
-
+2つ目の役割はメソッド呼び出しである。Rubyでは、メソッドはオブジェクト上に定義される。明示的にレシーバを指定しないメソッド呼び出しでは、Rubyはレシーバとしてカレントオブジェクトであるselfを使う。このとき、selfの所属するクラス上でメソッドを検索する。レシーバを明示してメソッドを呼び出すとselfが変化する。このときクラス定義もまた変化する。
 ```
